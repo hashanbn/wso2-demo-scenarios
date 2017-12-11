@@ -1,2 +1,2 @@
-# wso2-demo-scenarios
+# Dockerized-Demo-Scenarios
 Demo Scenarios Using WSO2 Products
