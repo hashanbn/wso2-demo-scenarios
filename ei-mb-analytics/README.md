@@ -7,10 +7,15 @@ In this setup, there are three mock services developed using msf4j, which will p
 ## How to run
 1. Install docker into your environment
 2. Clone this Git repository
-3. Depending on the dependencies specified in the demo version, download the desired Enterprise Integrator pack (wso2ei-*.*.*.zip).
-4. Copy wso2ei-*.*.*.zip into ei-setup, ei-mb-setup and ei-analytics-setup folders.
-5. Goto v*.*.* and execute the following command.
+3. Depending on the dependencies specified in the demo version, download the desired Enterprise Integrator pack (wso2ei-x.x.x.zip).
+4. Copy wso2ei-x.x.x.zip into ei-setup, ei-mb-setup and ei-analytics-setup folders.
+5. Goto vX.X.X and execute the following command.
    ```bash
    docker-compose build && docker-compose up
    ```
-
+   
+## Test the scenario
+Once all the components of the system are up, run the following command.
+```bash
+curl -X POST -H "Content-Type: application/json" --data '{"id": 6, "region": "us", "cardNo": "123456"}' http://localhost:8280/testAPI/test
+```
